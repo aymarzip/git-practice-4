@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Глибокий Сад (Deep Garden) — Прототип гри</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <header class="game-header">
+            <div class="title-group">
+                <h1>Глибокий Сад: Пробудження</h1>
+                <p>2D-платформер з механікою керування зарядом акумулятора</p>
+            </div>
+            <div class="hud">
+                <div class="hud-item">
+                    <span class="hud-label">Батарея:</span>
+                    <div class="battery-bar-container">
+                        <div id="batteryFill" class="battery-fill" style="width: 100%;"></div>
+                    </div>
+                    <span id="batteryText" class="hud-val">100%</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">Кристали:</span>
+                    <span id="crystalsText" class="hud-val highlight">0 / 4</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="canvas-container">
+            <canvas id="gameCanvas" width="800" height="450"></canvas>
+            <div id="overlayScreen" class="overlay hidden">
+                <div class="modal">
+                    <h2 id="overlayTitle">Гру завершено</h2>
+                    <p id="overlayMessage">Заряд вичерпано. Робот відключився.</p>
+                    <button id="restartBtn" class="primary-btn">Спробувати знову (R)</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="game-footer">
+            <div class="controls-guide">
+                <span>Керування: <strong>A / D</strong> або <strong>← / →</strong> — рух; <strong>W / Пробіл</strong> — стрибок; <strong>R</strong> — перезапуск</span>
+            </div>
+            <p class="project-info">Практична робота №4 · Автор: Aymar (КН-2/1) · <a href="README.md">Документація проєкту</a></p>
+        </footer>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
